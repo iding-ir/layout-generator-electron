@@ -1,7 +1,7 @@
 {
   "name": "layout-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Parses and generates layout.",
   "scripts": {
     "start": "nf start -p 3000",
     "build": "react-scripts build",
@@ -12,7 +12,9 @@
     "react-start": "BROWSER=none react-scripts start",
     "pack": "build --dir",
     "dist": "npm run build && build",
-    "postinstall": "install-app-deps"
+    "postinstall": "install-app-deps",
+    "linux": "electron-packager . --platform linux --arch x64 --out dist/",
+    "deb64": "electron-installer-debian --config installer-config.json"
   },
   "env": {
     "browser": true,
@@ -77,6 +79,8 @@
   "devDependencies": {
     "electron": "^7.1.10",
     "electron-builder": "^22.2.0",
+    "electron-installer-debian": "^3.0.0",
+    "electron-packager": "^14.2.0",
     "foreman": "^3.0.1"
   }
 }

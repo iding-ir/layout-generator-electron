@@ -1,0 +1,8 @@
+{
+  "src": "dist/layout-generator-linux-x64/",
+  "dest": "dist/installers/",
+  "arch": "amd64",
+  "icon": "public/assets/favicon/favicon.ico",
+  "categories": ["Utility"],
+  "lintianOverrides": ["changelog-file-missing-in-native-package"]
+}
