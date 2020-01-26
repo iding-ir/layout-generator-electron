@@ -1,5 +1,6 @@
 {
   "name": "layout-generator",
+  "productName": "Layout Generator",
   "version": "1.0.0",
   "description": "Parses and generates layout.",
   "scripts": {
@@ -14,7 +15,8 @@
     "dist": "npm run build && build",
     "postinstall": "install-app-deps",
     "linux": "electron-packager . --platform linux --arch x64 --out dist/",
-    "deb64": "electron-installer-debian --config installer-config.json"
+    "deb64": "electron-installer-debian --config installer-config.json",
+    "win32": "electron-packager . --overwrite --platform win32 --arch ia32 --icon assets/icons/win/icon.ico --prune true --out dist --version-string.CompanyName CE --version-string.FileDescription CE"
   },
   "env": {
     "browser": true,
